@@ -1,3 +1,8 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let expletive = env::args().nth(1).unwrap_or("y".into());
+    loop {
+        println!("{}", expletive);
+    }
 }
